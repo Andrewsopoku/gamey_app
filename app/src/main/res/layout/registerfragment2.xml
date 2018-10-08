@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/welcome_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="false"
+    android:background="#f4b400"
+    android:orientation="vertical"
+    android:layout_weight="6"
+    android:paddingTop="48dp">
+
+    <FrameLayout
+        android:id="@id/images"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:clipChildren="false">
+        <ImageView
+            android:id="@+id/welcome_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/welcome_02"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:alpha="0.2"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#ffffff"
+
+                android:id="@+id/email"
+
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <TextView
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/db"
+                android:text="Date of birth"
+                android:textColor="#fff"
+                android:layout_below="@+id/email"
+                android:layout_centerHorizontal="true"
+                />
+
+                <com.mikhaellopez.lazydatepicker.LazyDatePicker
+                    android:id="@+id/dob"
+                    android:layout_below="@+id/db"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    app:ldp_text_color="#fff"
+                    app:ldp_hint_color="#fff"
+                    app:ldp_date_format="mm-dd-yyyy"
+
+                    />
+
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#ffffff"
+
+                android:id="@+id/coc"
+
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/dob"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country of Citizenship"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#ffffff"
+
+                android:id="@+id/cor"
+
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/coc"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country of Residence"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#ffffff"
+
+                android:id="@+id/ec"
+                android:layout_below="@+id/cor"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Emergency Contact"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:mtf_labelColor="#ffffff"
+
+                android:id="@+id/ac"
+                android:layout_below="@+id/ec"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/acctype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ms_arrowColor="#ffffff"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="#ffffff"
+                    app:ms_floatingLabelText="Account Type"
+                    app:ms_hint="Account type"
+                    app:ms_multiline="true" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

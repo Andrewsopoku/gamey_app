@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7d7e2"
+
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_depo_loader"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10.0dp"
+        app:cardCornerRadius="10.0dp"
+        android:backgroundTint="@color/pb_white"
+
+        >
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"
+                tools:layout_editor_absoluteY="309dp"
+                tools:layout_editor_absoluteX="10dp"
+                />
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75"
+                tools:layout_editor_absoluteY="446dp"
+                tools:layout_editor_absoluteX="10dp"
+                />
+            <ImageView
+                android:id="@+id/bg_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:transitionName="profile_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_mid"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@mipmap/invest"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totaler"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="@+id/guideline_mid"
+                app:layout_constraintBottom_toTopOf="@+id/role"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <TextView
+
+                    android:id="@+id/dollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+
+                    android:gravity="center_horizontal"
+
+
+                    android:textAlignment="center"
+                    android:textSize="28.0sp"
+                    />
+
+                <TextView
+                    android:id="@+id/depototal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="99999"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="28.0sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    tools:layout_editor_absoluteX="142dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/role"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total Deposit"
+                android:textColor="#AAAAAA"
+                android:textAlignment="center"
+                android:textSize="18.0sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/totaler"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_75"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_add"
+                app:layout_constraintTop_toTopOf="@+id/guideline_75"
+                app:layout_constraintBottom_toTopOf="@+id/guideline_75"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteX="10dp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                >
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#FFF"
+                    android:id="@+id/overdamt">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Amount"
+                        android:inputType="numberDecimal"
+                        android:textColor="#8a8f8f"
+                        android:id="@+id/damt"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Deposit"
+                    android:layout_alignParentRight="true"
+                    android:layout_toLeftOf="@+id/overdamt"
+                    android:id="@+id/adddepo"
+                    android:background="@color/colorPrimary"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

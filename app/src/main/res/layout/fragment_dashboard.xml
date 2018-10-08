@@ -1,0 +1,451 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#d7d7e2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d7d7e2"
+        android:orientation="vertical">
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlDragRate="0.7"
+            app:srlHeaderMaxDragRate="1.3"
+            app:srlEnableLoadMore="false">
+
+            <com.scwang.smartrefresh.header.DeliveryHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/panel_lytz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="15dp"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/panelz"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="00dp"
+                            android:paddingTop="@dimen/padding_common_v"
+                            android:paddingBottom="@dimen/padding_common_v"
+                            android:paddingLeft="@dimen/padding_common_h"
+                            android:paddingRight="@dimen/padding_common_h"
+                            android:background="@mipmap/headerpic"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            >
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/avatar"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/propichome"
+
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/propichome"
+                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/userhomename"
+                                android:text="name of user"
+                                android:textColor="@color/pb_white"
+                                android:fontFamily="casual"
+                                android:textStyle="bold"
+                                />
+
+
+                        </RelativeLayout>
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:backgroundTint="@color/pb_white"
+                                android:layout_marginBottom="-20dp"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:layout_margin="10dp"
+                                    >
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/moneypart"
+
+
+                                        >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/cedisign"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="$"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/amount"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="0"
+                                            android:layout_toEndOf="@+id/cedisign"
+                                            android:layout_marginLeft="2dp"
+                                            />
+                                    </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:textStyle="bold"
+                                        android:textColor="#000"
+                                        android:text="Total Deposit"
+                                        android:layout_below="@id/moneypart"
+
+                                        />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                        </android.support.v7.widget.CardView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/panelm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="00dp"
+                        android:paddingTop="@dimen/padding_common_v"
+                        android:paddingBottom="@dimen/padding_common_v"
+                        android:paddingLeft="@dimen/padding_common_h"
+                        android:paddingRight="@dimen/padding_common_h"
+                        android:background="@android:color/white"
+                        android:layout_below="@+id/panel_lytz"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/padding_common_h">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Match"
+                            android:id="@+id/match"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_margin="@dimen/padding_common_h"
+                            android:layout_alignParentTop="true"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.4dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_below="@+id/match"
+                            android:id="@+id/matchline"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/matchline"
+                            >
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/avatar"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/propicmatch"
+
+                                />
+
+                            <com.flyco.roundview.RoundTextView style="@style/AppTheme.Label"
+                                android:id="@+id/matchname"
+
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="@dimen/padding_common"
+                                android:layout_marginLeft="@dimen/padding_common"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="25dp"
+                                android:textColor="@color/colorPrimary"
+                                app:rv_backgroundColor="@android:color/white"
+                                app:rv_textPressColor="@android:color/white"
+                                app:rv_cornerRadius="3dp"
+                                android:text="20 Tokens"
+                                android:layout_alignParentRight="true"
+                                />
+
+                            <com.flyco.roundview.RoundTextView style="@style/AppTheme.Label"
+                                android:id="@+id/matchmomo"
+
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="@dimen/padding_common"
+                                android:layout_marginLeft="@dimen/padding_common"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="25dp"
+                                android:textColor="#06733a"
+                                app:rv_backgroundColor="@android:color/white"
+                                app:rv_textPressColor="@android:color/white"
+                                app:rv_cornerRadius="3dp"
+                                android:text="20 Pledges"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/matchamt"
+                                />
+                            <com.flyco.roundview.RoundTextView style="@style/AppTheme.Label"
+                                android:id="@+id/matchamt"
+
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="@dimen/padding_common"
+                                android:layout_marginLeft="@dimen/padding_common"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="25dp"
+                                android:textColor="#bc0202"
+                                app:rv_backgroundColor="@android:color/white"
+                                app:rv_textPressColor="@android:color/white"
+                                app:rv_cornerRadius="3dp"
+                                android:text="50 Cedis"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/matchname"
+                                />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout android:orientation="horizontal"
+                        android:layout_height="160dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/panel_lytz">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/activity_vertical_margin"
+
+                            >
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/pb_white">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    >
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:padding="13dp"
+                                        android:background="@color/colorPrimary"
+                                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
+                                        >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_gain"
+                                        android:tint="@color/pb_white"/>
+
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                       android:layout_margin="@dimen/activity_horizontal_margin"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="$"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/gain"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="0"
+
+                                            android:layout_marginLeft="10dp"
+                                            />
+                                    </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Gains"
+                                        android:textColor="@color/colorPrimary"
+                                        />
+
+                                </LinearLayout>
+
+
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/activity_vertical_margin"
+
+                            >
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@color/pb_white">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    >
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:padding="13dp"
+                                        android:background="@color/pb_red_dark"
+                                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_loss"
+                                            android:tint="@color/pb_white"/>
+
+                                    </RelativeLayout>
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/activity_horizontal_margin"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="$"
+
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/loss"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/colorPrimary"
+                                            android:text="0"
+
+                                            android:layout_marginLeft="10dp"
+                                            />
+                                    </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Loses"
+                                        android:textColor="@color/colorPrimary"
+                                        />
+
+                                </LinearLayout>
+
+
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/blurview3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:realtimeOverlayColor="@android:color/transparent"/>
+
+</FrameLayout>
